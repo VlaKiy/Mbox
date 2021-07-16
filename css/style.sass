@@ -1,0 +1,512 @@
+html
+    background-color: #000000
+    
+body
+    margin: 0
+    padding: 0 
+    height: 100vh
+    background: url(../img/first_section/bg.jpg)
+    background-size: 100vw 100vh
+    background-repeat: no-repeat
+    font-family: 'Mulish', sans-serif
+    font-weight: 700
+    color: #ffffff
+    display: flex
+    flex-flow: wrap
+    justify-content: center
+a   
+    text-decoration: none
+
+.container
+    max-width: 1440px
+    
+
+.hero_section
+    width: 100%
+    height: 100vh
+    display: flex
+    flex-flow: column
+    border-bottom: 2px solid #2F2E2E
+    &_header
+        width: 100%
+        height: 70px
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+        position: fixed
+        background-color: black
+        padding: 6px 0 6px 0
+        z-index: 10
+        &_cont
+            display: flex
+            justify-content: center
+            padding: 0 50px 0 50px
+        &_nav
+            width: 400px
+            display: flex
+            justify-content: space-between
+            &_cont
+                height: 10px
+                margin-bottom: 10px
+                &_text
+                    font-size: 16px
+                    opacity: 0.5
+                    cursor: pointer
+                    transition: 0.5s
+                    font-family: 'Mulish', sans-serif
+                    font-weight: 700
+                    color: #ffffff
+                    &:hover
+                        opacity: 1
+                        transition: 0.5s
+                        & + .hero_section_header_nav_cont_line
+                            transition-duration: 0.5s
+                            width: 100%
+                            height: 2px
+                            background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                            margin-top: 5px
+        &_btns
+            width: 220px
+            display: flex
+            justify-content: space-between
+            &_btn
+                cursor: pointer
+        &_logo
+            cursor: pointer
+    &_text_cont
+        margin-top: 18%
+        margin-left: 12%
+        &_title
+            font-family: "Marcellus", serif
+            font-weight: normal
+            font-size: 100px
+            
+            margin-left: -4px
+        &_info
+            width: 300px
+            font-family: 'Mulish', sans-serif
+            font-style: normal
+            font-weight: 800
+            font-size: 16px
+            
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-top: 19px
+            &_age
+                width: 60px
+                height: 24px
+                text-align: center
+                border: 2px solid #326CFF
+                border-radius: 15px
+            &_rate
+                display: flex
+                align-items: center
+                &_text
+                    margin-left: 7px
+        &_descr
+            width: 468px
+            font-family: 'Mulish', sans-serif
+            font-style: normal
+            font-weight: 400
+            font-size: 18px
+            color: #C2C2C2
+            margin-top: 25px
+        &_btns
+            width: 400px
+            display: flex
+            justify-content: space-between
+            margin-top: 25px
+            &_btn
+                width: 141px
+                height: 50px
+                background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+                border-radius: 100px
+                border: none
+                font-family: 'Mulish', sans-serif
+                font-weight: 800
+                font-size: 16px
+                color: #ffffff
+                cursor: pointer
+                padding-top: 2px
+                display: flex
+                justify-content: center
+                align-items: center
+                &:hover
+                    background: linear-gradient(316.53deg, #2ceca5 13.2%, #1a8ec5 71.54%)
+                &_img
+                    width: 14px
+                    height: 18px
+                    margin-right: 9px
+            &_btn2
+                width: 195px
+                height: 50px
+                background: #FFFFFF
+                border-radius: 100px
+                border: none
+                font-family: 'Mulish', sans-serif
+                font-weight: 800
+                font-size: 16px
+                color: #323232
+                cursor: pointer
+                &:hover
+                    background: #cccccc
+                    color: #0e0e0e
+
+.trending_section
+    &_tv_cont
+        margin-top: 60px
+        &_text
+            display: flex
+            align-items: center
+            margin-bottom: 47px
+            &_line
+                width: 8px
+                height: 35px
+                background: linear-gradient(226.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                border-radius: 50px
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                margin-right: 11px
+            &_span
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                cursor: pointer
+            &_arr
+                font-size: 20px
+                font-weight: 400
+                margin-left: 11px
+        &_films
+            display: flex
+            align-items: center
+            justify-content: space-between
+            min-width: 0
+            &_film
+                &_img
+                    width: 203.53px
+                    height: 309px
+                    border-radius: 22px
+                    cursor: pointer
+                    &:hover
+                        width: 203.53px
+                        height: 309px
+                        box-shadow: 0px 4px 50px -29px #26FFF2
+            &_arr
+                position: static
+                cursor: pointer
+                &_prev
+                    transform: rotateZ(180deg)
+    &_movies_cont
+        margin-top: 60px
+        &_text
+            display: flex
+            align-items: center
+            margin-bottom: 47px
+            &_line
+                width: 8px
+                height: 35px
+                background: linear-gradient(226.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                border-radius: 50px
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                margin-right: 11px
+            &_span
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                cursor: pointer
+            &_arr
+                font-size: 20px
+                font-weight: 400
+                margin-left: 11px
+        &_films
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &_film
+                width: 203.53px
+                height: 309px
+                border-radius: 22px
+                cursor: pointer
+                &_img
+                    width: 203.53px
+                    height: 309px
+                    border-radius: 22px
+                    cursor: pointer
+                    &:hover
+                        width: 203.53px
+                        height: 309px
+                        box-shadow: 0px 4px 50px -29px #26FFF2
+            &_arr
+                position: static
+                cursor: pointer
+    &_btn_cont
+        margin-top: 55px
+        &_btn
+            width: 141px
+            height: 50px
+            background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+            box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+            border-radius: 100px
+            border: none
+            font-family: 'Mulish', sans-serif
+            font-weight: 800
+            font-size: 16px
+            color: #FFFFFF
+            cursor: pointer
+            &:hover
+                background: linear-gradient(316.53deg, #2ceca5 13.2%, #1a8ec5 71.54%)
+
+.popular_section
+    margin-top: 100px
+    &_genres
+        &_text
+            display: flex
+            align-items: center
+            margin-bottom: 40px
+            &_line
+                width: 8px
+                height: 35px
+                background: linear-gradient(226.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                border-radius: 50px
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                margin-right: 11px
+            &_span
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                cursor: pointer
+            &_arr
+                font-size: 20px
+                font-weight: 400
+                margin-left: 11px
+        &_cont_desks
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            row-gap: 1rem
+            &_desk
+                width: 340px
+                height: 198px
+                border-radius: 20px
+                display: flex
+                flex-wrap: wrap
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                row-gap: 8px
+                cursor: pointer
+                &:hover
+                    box-shadow: 0px 4px 50px -23px #26FFF2
+    &_channels
+        margin-top: 70px
+        &_text
+            display: flex
+            align-items: center
+            margin-bottom: 40px
+            &_line
+                width: 8px
+                height: 35px
+                background: linear-gradient(226.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                border-radius: 50px
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                margin-right: 11px
+            &_span
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                cursor: pointer
+            &_arr
+                font-size: 20px
+                font-weight: 400
+                margin-left: 11px
+        &_channels
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &_channel
+                & div
+                    width: 260px
+                    height: 118px
+                    background: #FFFFFF
+                    border-radius: 20px
+                    cursor: pointer
+                    &:hover
+                        box-shadow: 0px 4px 50px -29px #26FFF2
+            &_arr
+                position: static
+                cursor: pointer
+    &_a_and_d
+        margin-top: 70px
+        &_text
+            display: flex
+            align-items: center
+            margin-bottom: 40px
+            &_line
+                width: 8px
+                height: 35px
+                background: linear-gradient(226.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+                border-radius: 50px
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                margin-right: 11px
+            &_span
+                font-family: Mulish
+                font-weight: bold
+                font-size: 28px
+                cursor: pointer
+            &_arr
+                font-size: 20px
+                font-weight: 400
+                margin-left: 11px
+        &_people
+            display: flex
+            align-items: center
+            justify-content: space-between
+            &_person
+                width: 190px
+                height: 190px
+                border-radius: 50%
+                cursor: pointer
+                margin-bottom: 23px
+                &:hover
+                    box-shadow: 0px 4px 50px -29px #26FFF2
+                &_name
+                    font-size: 18px
+                &_cont
+                    display: flex
+                    flex-flow: wrap
+                    justify-content: center
+            &_arr
+                position: static
+                cursor: pointer
+
+.first_banner
+    width: 1400px
+    height: 301px
+    margin-top: 100px
+    &_img
+        width: 100%
+        height: 100%
+.sec_banner
+    display: flex
+    justify-content: center
+    &_img
+        width: 1000px
+        height: 200px
+        margin-top: 121px
+        border-radius: 22px
+        display: flex
+        justify-content: space-around
+        align-items: center
+        &_text
+            font-size: 49px
+        &_btn
+            width: 141px
+            height: 50px
+            background: linear-gradient(316.53deg, #26FFF2 13.2%, #326CFF 71.54%)
+            box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5)
+            border-radius: 100px
+            border: none
+            font-weight: 800
+            font-size: 16px
+            color: #ffffff
+            cursor: pointer
+            &:hover
+                background: linear-gradient(316.53deg, #2ceca5 13.2%, #1a8ec5 71.54%)
+
+.footer
+    width: 100%
+    margin-top: 121px
+    background: #101012
+    display: flex
+    justify-content: center
+    padding: 70px 0 70px 0
+    &_cont
+        width: 1440px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        & a
+            font-weight: 600
+            font-size: 18px
+            color: #C2C2C2
+            text-decoration: none
+            transition: 0.2s
+            &:hover
+                color: #ffffff
+        &_logo_cont
+            &_logo
+            &_soc
+                width: 100px
+                margin-top: 21px
+                display: flex
+                align-items: center
+                justify-content: space-between
+                &_icon
+                    cursor: pointer
+        &_text_cont
+            display: flex
+            flex-direction: column
+            row-gap: 20px
+            
+.slick
+    &-track
+        display: flex
+        align-items: flex-start
+    &-list
+        overflow: hidden
+    &-slider
+        min-width: 0
+    
+.slider
+    position: relative
+    padding: 0 60px
+    & .slick
+        &-arrow
+            position: absolute
+            margin: -30px 0px 0px 0px
+            z-index: 1
+            font-size: 0
+            width: 30px
+            height: 30px
+            border: none
+            cursor: pointer
+            &.slick
+                &-prev
+                    left: 0
+                    background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
+                    transform: rotateZ(180deg)
+                &-next
+                    right: 0
+                    background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
+    &_third
+        position: relative
+        padding: 0 80px
+        & .slick
+            &-arrow
+                position: absolute
+                margin: -30px 0px 0px 0px
+                z-index: 1
+                font-size: 0
+                width: 30px
+                height: 30px
+                border: none
+                cursor: pointer
+                &.slick
+                    &-prev
+                        left: 0
+                        background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
+                        transform: rotateZ(180deg)
+                    &-next
+                        right: 0
+                        background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
