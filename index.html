@@ -23,39 +23,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@700&display=swap" rel="stylesheet">
     <!-- /fonts -->
 
-    <title>Night Watch</title>
+    <title>Mbox - Watch films with your friends</title>
 </head>
 <body>
+    <div class="pop-up_cont">
+        <div class="pop-up_cont_pop">
+            <div class="pop-up_cont_pop_exit_cont">
+                <div class="pop-up_cont_pop_exit_cont_exit">X</div>
+            </div>
+            <div class="pop-up_cont_pop_text_cont">
+                <span>Вы нажали на кнопку</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero_section_header_cont">
+        <div class="hero_section_header">
+            <a href="#"><img class="hero_section_header_logo" src="img/first_section/header/Logo.svg" alt="Logo"></a>
+            <nav class="hero_section_header_nav">
+                <div class="hero_section_header_nav_cont">
+                    <a href="#" class="hero_section_header_nav_cont_text"><span>Home</span></a>
+                    <div class="hero_section_header_nav_cont_line"></div>
+                </div>
+                <div class="hero_section_header_nav_cont">
+                    <a href="#" class="hero_section_header_nav_cont_text"><span>TV Shows</span></a>
+                    <div class="hero_section_header_nav_cont_line"></div>
+                </div>
+                <div class="hero_section_header_nav_cont">
+                    <a href="#" class="hero_section_header_nav_cont_text"><span>Movies</span></a>
+                    <div class="hero_section_header_nav_cont_line"></div>
+                </div>
+                <div class="hero_section_header_nav_cont">
+                    <a href="#" class="hero_section_header_nav_cont_text"><span>Series</span></a>
+                    <div class="hero_section_header_nav_cont_line"></div>
+                </div>
+            </nav>
+            <div class="hero_section_header_btns">
+                <img src="img/first_section/header/Search.svg" alt="Search" class="hero_section_header_btns_btn">
+                <img src="img/first_section/header/Notif.svg" alt="Notifications" class="hero_section_header_btns_btn">
+                <img src="img/first_section/header/Person.svg" alt="Profile" class="hero_section_header_btns_btn">
+            </div>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                    <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#">Home</a></li>
+                    <li><a class="menu__item" href="#">TV Shows</a></li>
+                    <li><a class="menu__item" href="#">Movies</a></li>
+                    <li><a class="menu__item" href="#">Series</a></li>
+                    <div class="menu__box_soc">
+                        <img src="img/first_section/header/Search.svg" alt="Search" class="menu__box_soc_btn">
+                        <img src="img/first_section/header/Notif.svg" alt="Notifications" class="menu__box_soc_btn">
+                        <img src="img/first_section/header/Person.svg" alt="Profile" class="menu__box_soc_btn">
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="hero_section">
-            <div class="hero_section_header_cont">
-                <div class="hero_section_header">
-                    <a href="#"><img class="hero_section_header_logo" src="img/first_section/header/Logo.svg" alt="Logo"></a>
-                    <nav class="hero_section_header_nav">
-                        <div class="hero_section_header_nav_cont">
-                            <a href="#" class="hero_section_header_nav_cont_text"><span>Home</span></a>
-                            <div class="hero_section_header_nav_cont_line"></div>
-                        </div>
-                        <div class="hero_section_header_nav_cont">
-                            <a href="#" class="hero_section_header_nav_cont_text"><span>TV Shows</span></a>
-                            <div class="hero_section_header_nav_cont_line"></div>
-                        </div>
-                        <div class="hero_section_header_nav_cont">
-                            <a href="#" class="hero_section_header_nav_cont_text"><span>Movies</span></a>
-                            <div class="hero_section_header_nav_cont_line"></div>
-                        </div>
-                        <div class="hero_section_header_nav_cont">
-                            <a href="#" class="hero_section_header_nav_cont_text"><span>Series</span></a>
-                            <div class="hero_section_header_nav_cont_line"></div>
-                        </div>
-                    </nav>
-                    <div class="hero_section_header_btns">
-                        <img src="img/first_section/header/Search.svg" alt="Search" class="hero_section_header_btns_btn">
-                        <img src="img/first_section/header/Notif.svg" alt="Notifications" class="hero_section_header_btns_btn">
-                        <img src="img/first_section/header/Person.svg" alt="Profile" class="hero_section_header_btns_btn">
-                    </div>
-                </div>
-            </div>
+            
             <div class="hero_section_text_cont">
                 <span class="hero_section_text_cont_title">Night Watch</span>
                 <div class="hero_section_text_cont_info">
@@ -73,9 +101,9 @@
                     consectetur adipiscing elit.
                 </div>
                 <div class="hero_section_text_cont_btns">
-                    <button class="hero_section_text_cont_btns_btn">
+                    <button onclick="pop_up()" class="hero_section_text_cont_btns_btn">
                         <img src="img/first_section/play.svg" alt="play" class="hero_section_text_cont_btns_btn_img"> Watch</button>
-                    <button class="hero_section_text_cont_btns_btn2">More information</button>
+                    <button onclick="pop_up()" class="hero_section_text_cont_btns_btn2">More information</button>
                 </div>
             </div>
         </div>
@@ -134,7 +162,7 @@
                 </div>
             </div>
             <div class="trending_section_btn_cont">
-                <button class="trending_section_btn_cont_btn">See more</button>
+                <button onclick="pop_up()" class="trending_section_btn_cont_btn">See more</button>
             </div>
         </div>
         <div class="popular_section">
@@ -241,7 +269,7 @@
         <div class="sec_banner">
             <div class="sec_banner_img" style="background-image: url('img/banner2/banner.jpg');">
                 <div class="sec_banner_img_text">Are You New Here ?<br> Don’t wait, Register Now.</div>
-                <button class="sec_banner_img_btn">Register Now</button>
+                <button onclick="pop_up()" class="sec_banner_img_btn">Register Now</button>
             </div>
         </div>
     </div>
@@ -282,5 +310,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="js/slick.min.js"></script>
         <script src="js/script.js"></script> 
+        <script src="js/main.js"></script> 
 </body>
 </html>

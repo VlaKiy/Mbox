@@ -18,6 +18,7 @@ a
     text-decoration: none
 
 .container
+    width: 100%
     max-width: 1440px
     
 
@@ -28,19 +29,23 @@ a
     flex-flow: column
     border-bottom: 2px solid #2F2E2E
     &_header
-        width: 100%
+        width: 90%
         height: 70px
         display: flex
         justify-content: space-evenly
         align-items: center
-        position: fixed
         background-color: black
         padding: 6px 0 6px 0
         z-index: 10
         &_cont
+            width: 100%
+            max-width: 1440px
+            height: 70px
             display: flex
             justify-content: center
-            padding: 0 50px 0 50px
+            background-color: black
+            position: fixed
+            z-index: 10
         &_nav
             width: 400px
             display: flex
@@ -96,7 +101,9 @@ a
             &_age
                 width: 60px
                 height: 24px
-                text-align: center
+                display: flex
+                justify-content: center
+                align-items: center
                 border: 2px solid #326CFF
                 border-radius: 15px
             &_rate
@@ -180,10 +187,10 @@ a
                 font-weight: 400
                 margin-left: 11px
         &_films
-            display: flex
-            align-items: center
-            justify-content: space-between
-            min-width: 0
+            // display: flex
+            // align-items: center
+            // justify-content: space-between
+            // min-width: 0
             &_film
                 &_img
                     width: 203.53px
@@ -391,18 +398,24 @@ a
                 cursor: pointer
 
 .first_banner
-    width: 1400px
-    height: 301px
+    width: 100%
+    max-width: 1400px
     margin-top: 100px
+    display: flex
+    justify-content: center
     &_img
-        width: 100%
-        height: 100%
+        width: 30%
+        height: 30%
+        min-width: 300px
+        min-height: 110px
 .sec_banner
     display: flex
     justify-content: center
     &_img
-        width: 1000px
-        height: 200px
+        width: 90%
+        min-height: 162px
+        max-width: 1000px
+        max-height: 200px
         margin-top: 121px
         border-radius: 22px
         display: flex
@@ -465,12 +478,13 @@ a
         align-items: flex-start
     &-list
         overflow: hidden
+        width: 1320px
     &-slider
-        min-width: 0
+        display: flex
+        justify-content: center
+        align-items: center
     
 .slider
-    position: relative
-    padding: 0 60px
     & .slick
         &-arrow
             position: absolute
@@ -483,15 +497,13 @@ a
             cursor: pointer
             &.slick
                 &-prev
-                    left: 0
+                    left: 20px
                     background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
                     transform: rotateZ(180deg)
                 &-next
-                    right: 0
+                    right: 20px
                     background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
     &_third
-        position: relative
-        padding: 0 80px
         & .slick
             &-arrow
                 position: absolute
@@ -504,9 +516,449 @@ a
                 cursor: pointer
                 &.slick
                     &-prev
-                        left: 0
+                        left: 20px
                         background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
                         transform: rotateZ(180deg)
                     &-next
-                        right: 0
+                        right: 20px
                         background: url('../img/trending_section/arr.svg') 0 0 / 100% no-repeat
+
+#menu__toggle 
+    opacity: 0
+    &:checked ~ .menu__btn > span 
+        transform: rotate(45deg)
+        &::before 
+            top: 0
+            transform: rotate(0)
+        
+        &::after 
+            top: 0
+            transform: rotate(90deg)
+        
+
+    &:checked ~ .menu__box 
+        visibility: visible
+        right: 0
+
+.menu__btn 
+    display: flex
+    align-items: center
+    position: fixed
+    top: 26px
+    width: 26px
+    height: 26px
+    cursor: pointer
+    z-index: 1
+    & > span, > span::before, > span::after 
+        display: block
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: #616161
+        transition-duration: .25s
+
+    & > span::before 
+        content: ''
+        top: -8px
+
+    & > span::after 
+        content: ''
+        top: 8px
+
+
+.menu__box 
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    right: -100%
+    width: 100%
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    background-color: #000000
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2)
+    transition-duration: .25s
+    text-align: right
+
+.menu__item 
+    display: block
+    padding: 12px 24px
+    color: #ECEFF1
+    font-size: 20px
+    font-weight: 600
+    text-decoration: none
+
+.menu__box_soc
+    display: flex
+    justify-content: space-around
+    width: 200px
+    margin-top: 10px
+    float: right
+
+.pop-up_cont
+    background: rgba(0, 0, 0, 0.83)
+    width: 100vw
+    height: 100vh
+    display: none
+    justify-content: center
+    align-items: center
+    position: fixed
+    z-index: 11
+    &_pop
+        width: 200px
+        height: 100px
+        background: #1b1b1b
+        z-index: 12
+        &_exit_cont
+            display: flex
+            justify-content: flex-end
+            &_exit
+                padding: 0px 4px
+                background: #c50000
+                cursor: pointer
+        &_text_cont
+            text-align: center
+            padding-top: 16px
+            
+
+@media (max-width: 1520px)
+    .slick-list
+        width: 910px
+
+@media (max-width: 481px)
+    body
+        background-size: 300vw 100vh
+        background-position-x: 55%
+    .slick-list
+        width: 210px
+    .sec_banner
+        &_img_text 
+            font-size: 1em
+        &_img
+            padding: 0 4px
+            &_btn
+                font-size: 0.8em
+    .hero_section
+        &_text_cont
+            margin-top: 53%
+            margin-left: 14px
+            &_title
+                font-size: 2em
+            &_info
+                font-size: 0.8em
+                width: 76%
+            &_descr
+                width: 82%
+            &_btns
+                width: 85%
+                &_btn
+                    width: 111px
+                &_btn2
+                    width: 162px
+                    margin-left: 10px
+        &_header
+            justify-content: space-between
+            padding: 0
+            &_nav
+                display: none
+            &_logo
+                width: 96px
+            &_btns
+                display: none
+    .footer
+        &_cont
+            max-width: 1440px
+            display: flex
+            flex-flow: column
+            justify-content: center
+            align-items: center
+            row-gap: 18px
+            &_text_cont
+                text-align: center
+            &_logo_cont
+                &_soc
+                    width: 100%
+    .popular_section
+        &_genres_cont
+            &_desks
+                justify-content: center
+                &_desk
+                    width: 285px
+                    height: 168px
+        &_genres
+            &_text
+                margin-left: 5px
+                &_line
+                    height: 21px
+                &_span
+                    font-size: 1.3em
+                &_arr
+                    font-size: 1.1em
+        &_channels
+            &_text
+                margin-left: 5px
+                &_line
+                    height: 21px
+                &_span
+                    font-size: 1.3em
+                &_arr
+                    font-size: 1.1em
+        &_a_and_d
+            &_text
+                margin-left: 5px
+                &_line
+                    height: 21px
+                &_span
+                    font-size: 1.3em
+                &_arr
+                    font-size: 1.1em
+    .trending_section
+        &_tv_cont
+            &_text
+                margin-left: 5px
+                &_line
+                    height: 21px
+                &_span
+                    font-size: 1.3em
+                &_arr
+                    font-size: 1.1em
+        &_movies_cont
+            &_text
+                margin-left: 5px
+                &_line
+                    height: 21px
+                &_span
+                    font-size: 1.3em
+                &_arr
+                    font-size: 1.1em
+        &_btn_cont
+            display: flex
+            justify-content: center
+    .menu__btn
+        top: 20px
+    
+@media (min-width: 481px)
+    body
+        background-size: 200vw 100vh
+        background-position-x: 57%
+
+    .menu__box
+        width: 200px
+
+    .slick-list 
+        width: 203px
+    .hero_section
+        &_text_cont
+            margin-top: 53%
+            margin-left: 3%
+            &_title
+                font-size: 3em
+            &_descr
+                width: 418px
+        &_header
+            padding: 0
+            height: auto
+            justify-content: space-between
+            &_nav
+                display: none
+            &_btns
+                display: none
+            &_cont
+                padding: 6px 0px 6px 0px
+                height: 50px
+            &_logo
+                width: 105px
+
+    .footer
+        &_cont
+            width: 217px
+            display: flex
+            flex-flow: column
+            &_text_cont
+                text-align: center
+            &_logo_cont
+                margin-bottom: 20px
+                &_soc
+                    width: 100%
+
+    .trending_section
+        &_tv_cont
+            &_text
+                margin-left: 5px
+        &_movies_cont
+            &_text
+                margin-left: 5px
+        &_btn_cont
+            display: flex
+            justify-content: center
+    
+    .popular_section
+        &_genres
+            &_text
+                margin-left: 5px
+            &_cont
+                &_desks
+                    justify-content: center
+        &_channels
+            &_text
+                margin-left: 5px
+        &_a_and_d
+            &_text
+                margin-left: 5px
+
+    .sec_banner
+        &_img
+            &_text
+                font-size: 1.3em
+            &_btn
+                font-size: 0.89em
+
+    .menu__btn
+        top: 17px
+
+    .first_banner
+        &_img
+            width: 98%
+
+@media (min-width: 685px)
+    .popular_section
+        &_genres
+            &_cont
+                &_desks
+                    gap: 1rem
+                    &_desk
+                        width: 315px
+                        height: 180px
+    .hero_section
+        &_text
+            &_cont
+                margin-top: 40%
+    .slick-list
+        width: 420px
+
+@media (min-width: 600px)
+    .slick-list 
+        width: 420px
+
+    .slider_third
+        & .slick-list
+            width: 262px
+
+@media (min-width: 800px)
+    .hero_section
+        &_text_cont
+            margin-top: 25%
+            
+    body
+        background-size: 100vw 100vh
+        background-position-x: 0
+
+@media (min-width: 900px)
+    .slick-list
+        width: 625px
+    
+    .slider_third
+        & .slick-list
+            width: 533px
+
+@media (min-width: 976px)
+    .popular_section
+        &_genres
+            &_cont
+                &_desks
+                    justify-content: space-evenly
+
+    .slider_third
+        & .slick-list
+            width: 856px
+
+@media (min-width: 1000px)
+    .footer_cont
+        width: auto
+        flex-flow: row
+        column-gap: 1rem
+
+    .hamburger-menu
+        display: none
+
+    .hero_section
+        &_header
+            &_nav
+                display: flex
+            &_btns
+                display: flex
+
+    .slick-list
+        width: 845px
+
+    .sec_banner_img_text
+        font-size: 2.3em
+
+@media (min-width: 1440px)
+    .hero_section
+        &_text
+            &_cont
+                margin-top: 20%
+                margin-left: 5%
+
+    .slick-list
+        width: 1058px
+
+    .slider
+        & .slick-arrow
+            &.slick-prev
+                left: 8%
+            &.slick-next
+                right: 8%
+
+    .slider_third
+        & .slick-arrow
+            &.slick-prev
+                left: 8%
+            &.slick-next
+                right: 8%
+
+@media (min-width: 2560px)
+    .slider
+        & .slick-arrow
+            &.slick-prev
+                left: 26%
+            &.slick-next
+                right: 26%
+    
+    .slider_third
+        & .slick-arrow
+            &.slick-prev
+                left: 26%
+            &.slick-next
+                right: 26%
+
+    .hero_section
+        &_header
+            width: 42%
+            &_cont
+                width: 57%
+
+    body
+        background-size: 56vw 100vh
+        background-position-x: center
+
+@media (max-height: 500px)
+    .hero_section
+        &_text_cont
+            margin-top: 11%
+            &_title
+                font-size: 2.5em
+            &_btns
+                &_btn
+                    width: 114px
+                    height: 38px
+                &_btn2
+                    width: 160px
+                    height: 38px
+            &_descr
+                font-size: 16px
+            &_info
+                font-size: 14px
